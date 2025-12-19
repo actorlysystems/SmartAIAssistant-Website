@@ -1,373 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
-    <title>SmartBot – Smart AI Assistant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light" />
+    <title>Actorly Systems | Ultra-fast AI Chatbot Platform</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
-
-    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+    
     <link href="./assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="page-wrapper">
-        <!-- NAVBAR -->
-        <div class="smart-nav">
+        <nav class="smart-nav">
             <div class="d-flex align-items-center justify-content-between">
                 <div class="nav-logo">
-                    <span>AI</span> SMARTBOT
+                    <div class="logo-icon"><i class="bi bi-robot"></i></div>
+                    <div class="logo-text">Actorly <span>Systems</span></div>
                 </div>
 
-                <div class="nav-links d-none d-md-flex">
+                <div class="nav-links d-none d-lg-flex">
                     <a href="#product" class="nav-link-custom active">Product</a>
-                    <a href="#solutions" class="nav-link-custom">Solutions</a>
-                    <a href="#agencies" class="nav-link-custom">Agencies</a>
+                    <a href="#pipeline" class="nav-link-custom">How It Works</a>
+                    <a href="#architecture" class="nav-link-custom">Tech Stack</a>
                     <a href="#pricing" class="nav-link-custom">Pricing</a>
-                    <a href="#resources" class="nav-link-custom">Resources</a>
                 </div>
 
                 <div class="d-flex align-items-center gap-2">
                     <button class="nav-contact-btn d-none d-sm-flex">
-                        Contact Us
-                        <i class="bi bi-arrow-right"></i>
+                        Get Demo <i class="bi bi-arrow-right-short"></i>
                     </button>
-                    <button class="nav-toggle d-md-none" id="navToggle" aria-label="Toggle navigation">
+                    <button class="nav-toggle d-lg-none" id="navToggle">
                         <i class="bi bi-list"></i>
                     </button>
                 </div>
             </div>
-
-            <!-- Mobile links -->
-            <div class="nav-links-mobile d-md-none mt-2" id="navMobileLinks">
+             <div class="nav-links-mobile" id="navMobileLinks">
                 <a href="#product" class="nav-link-custom">Product</a>
-                <a href="#solutions" class="nav-link-custom">Solutions</a>
-                <a href="#agencies" class="nav-link-custom">Agencies</a>
+                <a href="#pipeline" class="nav-link-custom">Pipeline</a>
+                <a href="#architecture" class="nav-link-custom">Architecture</a>
                 <a href="#pricing" class="nav-link-custom">Pricing</a>
-                <a href="#resources" class="nav-link-custom">Resources</a>
-                <button class="btn-pill btn-dark-pill w-100 mt-1">
-                    Contact Us <i class="bi bi-arrow-right"></i>
-                </button>
             </div>
-        </div>
+        </nav>
 
-        <!-- HERO -->
         <section id="product" class="hero-section">
-            <div class="hero-background-text">SMARTBOT</div>
-            <div class="hero-inner row align-items-center">
-                <!-- left -->
-                <div class="col-lg-6 mb-4 mb-lg-0 hero-text">
-                    <div class="hero-tag">
-                        <span></span> Smart AI Assistant Based on RAG
-                    </div>
-                    <h1 class="hero-title">
-                        Get the Most From Every Conversation.
-                    </h1>
-                    <p class="hero-subtitle">
-                        SmartBot is your AI assistant powered by Retrieval-Augmented Generation (RAG) to answer
-                        questions from your
-                        own knowledge base, documents, and data in real-time.
-                    </p>
-
-                    <div class="hero-btns mb-2">
-                        <button class="btn-pill btn-dark-pill">
-                            Get Started
-                            <i class="bi bi-arrow-right"></i>
-                        </button>
-                        <button class="btn-pill btn-light-pill">
-                            Get Free Demo
-                        </button>
-                    </div>
-
-                    <div class="hero-badges">
-                        <div class="hero-badge-pill">
-                            <i class="bi bi-whatsapp"></i> WhatsApp
+            <div class="hero-bg-glow"></div>
+            <div class="container position-relative z-2">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 hero-text">
+                        <div class="hero-tag reveal-text">
+                            <span class="pulse-dot"></span> 
+                            <span>Latency Goal: 0.5s - 1s [cite: 2]</span>
                         </div>
-                        <div class="hero-badge-pill">
-                            <i class="bi bi-instagram"></i> Instagram DM
-                        </div>
-                        <div class="hero-badge-pill">
-                            <i class="bi bi-messenger"></i> Messenger
-                        </div>
-                    </div>
-                </div>
-
-                <!-- right -->
-                <div class="col-lg-6 hero-image-wrapper">
-                    <img src="assets/img/hero_robo.png" alt="SmartBot Mascot" class="hero-mascot" />
-
-                    <div class="hero-floating-card">
-                        <span>📈</span>
-                        <div>
-                            <div style="font-size:0.76rem;font-weight:600;">+132% Revenue</div>
-                            <div style="font-size:0.71rem;color:#6b7280;">AI driven replies</div>
-                        </div>
-                    </div>
-
-                    <div class="hero-floating-tags">
-                        <div class="hero-floating-tag">
-                            <i class="bi bi-robot"></i> 24/7 AI Support
-                        </div>
-                        <div class="hero-floating-tag">
-                            <i class="bi bi-stars"></i> RAG Knowledge Base
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: Transform good chats into great ones -->
-        <section id="solutions">
-            <div class="text-center mb-4">
-                <div class="section-label">Smart Automations</div>
-                <h2 class="section-title">Transform Good Chats Into Great Ones</h2>
-                <p class="section-subtitle mx-auto">
-                    Turn ordinary conversations into high-converting, context-aware experiences powered by RAG-based AI
-                    that
-                    understands your business.
-                </p>
-            </div>
-
-            <div class="row g-3 g-lg-4">
-                <div class="col-md-4">
-                    <div class="card-soft feature-card">
-                        <div class="card-pill-icon bg-pill-green">
-                            <i class="bi bi-emoji-smile"></i>
-                        </div>
-                        <h5 class="mb-2">Greet your new followers with ease</h5>
-                        <p class="mb-0" style="font-size:0.9rem;color:var(--muted);">
-                            Welcome every new customer instantly with friendly AI greetings trained on your tone of
-                            voice and brand.
+                        
+                        <h1 class="hero-title">
+                            The <span class="text-gradient">Fastest RAG</span> AI for Your Business
+                        </h1>
+                        
+                        <p class="hero-subtitle reveal-text">
+                            Train an Instruction-based AI Assistant on your PDFs, PowerBI reports, and Code files[cite: 4, 5]. 
+                            Deploy a custom widget in minutes.
                         </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-soft feature-card">
-                        <div class="card-pill-icon bg-pill-purple">
-                            <i class="bi bi-envelope-open-heart"></i>
+    
+                        <div class="hero-btns reveal-text">
+                            <button class="btn-primary-custom">Start Free Trial</button>
+                            <button class="btn-secondary-custom">View Live Demo</button>
                         </div>
-                        <h5 class="mb-2">Deliver automatic welcome messages</h5>
-                        <p class="mb-0" style="font-size:0.9rem;color:var(--muted);">
-                            Use ready-made flows or custom RAG prompts to send personalized messages that feel
-                            handcrafted.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-soft feature-card">
-                        <div class="card-pill-icon bg-pill-pink">
-                            <i class="bi bi-chat-square-dots"></i>
-                        </div>
-                        <h5 class="mb-2">Automate your FAQs with fast, intelligent answers</h5>
-                        <p class="mb-0" style="font-size:0.9rem;color:var(--muted);">
-                            Plug in your docs, website, and wikis. SmartBot responds with up-to-date answers within
-                            seconds.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: Business decision + chart -->
-        <section>
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                    <div class="section-label">Analytics</div>
-                    <h2 class="section-title">Make business decisions that help you grow.</h2>
-                    <p class="section-subtitle">
-                        Manage all your social channels, monitor AI conversations, track conversions, and understand
-                        which RAG
-                        documents drive the most revenue—from a single dashboard.
-                    </p>
-                    <div class="mt-3">
-                        <button class="btn-pill btn-dark-pill">
-                            Get Started
-                            <i class="bi bi-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="chart-card feature-card">
-                        <div class="d-flex justify-content-between align-items-center mb-2">
-                            <div>
-                                <div style="font-size:0.78rem;color:#6b7280;">Total Sales</div>
-                                <div style="font-weight:600;">25,000 USD</div>
-                            </div>
-                            <span class="mini-pill">This year</span>
-                        </div>
-                        <div class="d-flex justify-content-between" style="font-size:0.78rem;color:#6b7280;">
-                            <div>+132% vs last year</div>
-                            <div>SmartBot RAG Funnel</div>
-                        </div>
-                        <div class="chart-bars">
-                            <div class="chart-bar">
-                                <div class="chart-bar-inner" style="height:45%;"></div>
-                            </div>
-                            <div class="chart-bar">
-                                <div class="chart-bar-inner" style="height:65%;"></div>
-                            </div>
-                            <div class="chart-bar">
-                                <div class="chart-bar-inner" style="height:58%;"></div>
-                            </div>
-                            <div class="chart-bar">
-                                <div class="chart-bar-inner" style="height:80%;"></div>
-                            </div>
-                            <div class="chart-bar">
-                                <div class="chart-bar-inner" style="height:96%;"></div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between mt-2" style="font-size:0.78rem;color:#9ca3af;">
-                            <span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span>
+    
+                        <div class="hero-specs reveal-text">
+                            <div class="spec-item"><i class="bi bi-cpu-fill"></i> GPU Inference [cite: 22]</div>
+                            <div class="spec-item"><i class="bi bi-database-lock"></i> Private Vector DB [cite: 15]</div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: 3 quick steps -->
-        <section id="agencies">
-            <div class="text-center mb-4">
-                <div class="section-label">Onboarding</div>
-                <h2 class="section-title">Launch your journey in three quick and simple steps.</h2>
-                <p class="section-subtitle mx-auto">
-                    Begin your journey in minutes. Connect your channels, plug in your content, and watch SmartBot
-                    handle the rest.
-                </p>
-            </div>
-
-            <div class="row g-3 g-lg-4">
-                <div class="col-md-4">
-                    <div class="card-soft feature-card h-100">
-                        <div class="step-index">01</div>
-                        <h5>Create your free account</h5>
-                        <p style="font-size:0.9rem;color:var(--muted);">
-                            Sign up with email or social login and unlock instant access to your personal RAG-powered
-                            assistant.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-soft feature-card h-100">
-                        <div class="step-index">02</div>
-                        <h5>Sync your channels effortlessly</h5>
-                        <p style="font-size:0.9rem;color:var(--muted);">
-                            Connect Instagram, WhatsApp, Messenger, TikTok, and more with a few clicks using secure
-                            integrations.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-soft feature-card h-100">
-                        <div class="step-index">03</div>
-                        <h5>Upload your knowledge base</h5>
-                        <p style="font-size:0.9rem;color:var(--muted);">
-                            Drag and drop docs, PDFs, URLs, and FAQs. SmartBot builds a private RAG index tailored to
-                            your brand.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: Convert comments fast + follower connect + grow empire -->
-        <section>
-            <div class="row g-3 g-lg-4">
-                <div class="col-md-4">
-                    <div class="cta-block feature-card h-100">
-                        <div class="step-index">01</div>
-                        <h5>Convert comments fast</h5>
-                        <p style="font-size:0.9rem;color:var(--muted);">
-                            Turn simple post comments into DM conversations with auto-replies that feel human and
-                            helpful.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="cta-block feature-card h-100">
-                        <div class="step-index">02</div>
-                        <h5>Instant follower connect</h5>
-                        <p style="font-size:0.9rem;color:var(--muted);">
-                            Instantly connect with every follower using smart triggers and sequences that engage at the
-                            perfect time.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="cta-block feature-card h-100">
-                        <div class="step-index">03</div>
-                        <h5>Grow your digital empire</h5>
-                        <p style="font-size:0.9rem;color:var(--muted);">
-                            Scale your audience, leads, and sales without adding headcount—SmartBot never sleeps.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION: Stay connected across every place your audience exists -->
-        <section id="pricing">
-            <div class="row g-4 align-items-stretch">
-                <div class="col-lg-5">
-                    <div class="section-label">Omnichannel</div>
-                    <h2 class="section-title">Stay connected across every place your audience exists.</h2>
-                    <p class="section-subtitle">
-                        Reach your audience on every platform they use. SmartBot keeps your brand active 24/7,
-                        responding with
-                        context-aware answers powered by RAG.
-                    </p>
-                    <div class="mt-3">
-                        <button class="btn-pill btn-dark-pill">
-                            Start Free Trial
-                            <i class="bi bi-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="col-lg-7">
-                    <div class="row g-3 g-lg-4">
-                        <div class="col-md-6">
-                            <div class="platform-card instagram feature-card">
-                                <div class="platform-icon">
-                                    <i class="bi bi-instagram"></i>
+    
+                    <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+                        <div class="hero-visual-container">
+                            <div class="glass-card main-ui">
+                                <div class="chat-header">
+                                    <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                                    <span>Actorly Assistant</span>
                                 </div>
-                                <h5 class="mb-1">Instagram</h5>
-                                <p style="font-size:0.9rem;color:var(--muted);">
-                                    Grow your presence with smart story replies, comment automation, and DM funnels.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="platform-card tiktok feature-card">
-                                <div class="platform-icon">
-                                    <i class="bi bi-tiktok"></i>
+                                <div class="chat-body">
+                                    <div class="msg bot">Hello! How can I help you optimize your revenue today?</div>
+                                    <div class="msg user">Show me the Q3 sales report.</div>
+                                    <div class="msg bot typing">
+                                        <span></span><span></span><span></span>
+                                    </div>
+                                    <div class="msg bot final">Based on your uploaded PDF, Q3 sales grew by 24%...</div>
                                 </div>
-                                <h5 class="mb-1">TikTok</h5>
-                                <p style="font-size:0.9rem;color:var(--muted);">
-                                    Convert viral moments into long-term customers with instant, AI-driven replies.
-                                </p>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="platform-card feature-card">
-                                <div class="platform-icon">
-                                    <i class="bi bi-whatsapp"></i>
-                                </div>
-                                <h5 class="mb-1">WhatsApp & Messenger</h5>
-                                <p style="font-size:0.9rem;color:var(--muted);">
-                                    Deliver real-time support, send broadcasts, and build flows that answer in any
-                                    language using your own
-                                    data.
-                                </p>
+                            
+                            <div class="float-card card-latency">
+                                <div class="icon-box bg-green"><i class="bi bi-lightning-fill"></i></div>
+                                <div><small>Latency</small><strong>0.8s</strong></div>
+                            </div>
+                            <div class="float-card card-source">
+                                <div class="icon-box bg-blue"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+                                <div><small>Source</small><strong>Sales_Q3.pdf</strong></div>
                             </div>
                         </div>
                     </div>
@@ -375,97 +109,186 @@
             </div>
         </section>
 
-        <!-- BANNER SECTION WITH MASCOT -->
-        <section class="banner-section">
-            <div class="banner-background-text">SMARTBOT</div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="banner-tag">
-                        <i class="bi bi-cloud-check"></i> Cloud Hosted · Secure · RAG Powered
-                    </div>
-                    <h2 class="section-title">Grow your followers with smart automation.</h2>
-                    <p class="section-subtitle">
-                        Launch AI workflows in minutes with pre-built templates created for agencies, creators, and
-                        brands.
-                    </p>
-                    <div class="mt-3 hero-btns">
-                        <button class="btn-pill btn-dark-pill">
-                            Start Free Trial
-                        </button>
-                        <button class="btn-pill btn-light-pill">
-                            View Pricing
-                        </button>
-                    </div>
+        <section id="pipeline" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">The <span class="text-gradient">RAG Pipeline</span></h2>
+                    <p class="section-subtitle">From upload to answer in milliseconds.</p>
                 </div>
-                <div class="col-md-6 text-center mt-3 mt-md-0">
-                    <img src="assets/img/hero_robo.png" alt="SmartBot Mascot" class="banner-mascot hero-mascot" />
+
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <h4>Ingestion</h4>
+                        <p>Upload PDF, DOCX, PPT, URLs, or Code files. We support massive datasets.</p>
+                    </div>
+                    <div class="process-arrow"><i class="bi bi-arrow-right d-none d-md-block"></i><i class="bi bi-arrow-down d-md-none"></i></div>
+                    
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <h4>Chunking & Embedding</h4>
+                        <p>Data is split into optimized chunks and converted to vectors using BGE-Large models[cite: 14].</p>
+                    </div>
+                    <div class="process-arrow"><i class="bi bi-arrow-right d-none d-md-block"></i><i class="bi bi-arrow-down d-md-none"></i></div>
+
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <h4>Vector Storage</h4>
+                        <p> stored in Qdrant/Milvus with strict `bot_id` isolation for security[cite: 9, 15].</p>
+                    </div>
+                    <div class="process-arrow"><i class="bi bi-arrow-right d-none d-md-block"></i><i class="bi bi-arrow-down d-md-none"></i></div>
+
+                    <div class="process-step highlight">
+                        <div class="step-number">04</div>
+                        <h4>LLM Reasoning</h4>
+                        <p>DeepSeek R1 or Llama3 generates the answer using the retrieved context[cite: 13].</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- FOOTER -->
-        <footer class="footer" id="resources">
-            <div class="row gy-4">
-                <div class="col-md-4">
-                    <h6>Company</h6>
-                    <ul class="footer-list">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">System Status</a></li>
-                    </ul>
-
-                    <div class="footer-social">
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                        <a href="#"><i class="bi bi-whatsapp"></i></a>
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-pinterest"></i></a>
+        <section id="architecture" class="arch-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <h2 class="text-white mb-4">Enterprise Grade<br>Architecture</h2>
+                        <p class="text-white-50 mb-4">
+                            Built for speed and scale. We use async workers and GPU servers to hit that 0.5s latency goal[cite: 2, 24].
+                        </p>
+                        <ul class="arch-list">
+                            <li><i class="bi bi-code-square"></i> <strong>Frontend:</strong> Next.js / React + Tailwind [cite: 11]</li>
+                            <li><i class="bi bi-server"></i> <strong>Backend:</strong> FastAPI / Node.js [cite: 12]</li>
+                            <li><i class="bi bi-cpu"></i> <strong>LLM:</strong> DeepSeek R1 / Qwen / Llama3 [cite: 13]</li>
+                            <li><i class="bi bi-hdd-network"></i> <strong>Queue:</strong> Redis [cite: 17]</li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="col-md-4">
-                    <h6>Products</h6>
-                    <ul class="footer-list">
-                        <li><a href="#">Live Chat</a></li>
-                        <li><a href="#">Smart RAG Assistant</a></li>
-                        <li><a href="#">Analytics Dashboard</a></li>
-                        <li><a href="#">Automation Studio</a></li>
-                        <li><a href="#">Keyword Engine</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-                    <h6>Newsletter</h6>
-                    <p style="font-size:0.85rem;color:#d4d4d8;">
-                        Get product updates, RAG-playbooks, and automation tips straight to your inbox.
-                    </p>
-                    <div class="footer-newsletter">
-                        <input type="email" placeholder="Enter your email" />
-                        <button class="btn-footer-submit">Submit</button>
+                    <div class="col-lg-7">
+                        <div class="code-window">
+                            <div class="window-bar">
+                                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                                <span class="title">config.json</span>
+                            </div>
+                            <pre><code class="language-json">
+{
+  "project": "Actorly_Chatbot",
+  "latency_goal": "0.5s - 1s",
+  "features": {
+    "rag_sources": ["PDF", "DOCX", "PowerBI", "URL"],
+    "model": "DeepSeek-R1-Quantized",
+    "embedding": "BGE-Large-en-v1.5",
+    "vector_db": "Qdrant_Cloud"
+  },
+  "deployment": "Kubernetes / Docker GPU"
+}
+                            </code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <img src="assets/img/hero_robo.png" alt="SmartBot Mascot" class="footer-mascot hero-mascot" />
-            <div class="footer-big-text">SMARTBOT®</div>
+   <section id="pricing" class="py-5 mt-4">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Pricing Plans</h2>
+                    <p class="section-subtitle">Affordable for startups, powerful for enterprise.</p>
+                    
+                    <div class="pricing-toggle-wrapper">
+                        <span class="toggle-label">Monthly</span>
+                        <label class="switch">
+                            <input type="checkbox" id="pricingToggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="toggle-label">Yearly <span class="badge-save">Save 20%</span></span>
+                    </div>
+                </div>
 
-            <div class="footer-bottom mt-4">
-                <div>© 2025 SmartBot. All rights reserved.</div>
-                <div class="d-flex gap-3">
-                    <a href="#">Terms &amp; Conditions</a>
-                    <a href="#">Privacy Policy</a>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="pricing-card">
+                            <h3>Basic</h3>
+                            <div class="price-container">
+                                <span class="currency">₹</span>
+                                <span class="price-amount" data-monthly="999" data-yearly="9,590">999</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <p class="text-muted small">For early stage startups</p>
+                            <hr>
+                            <ul class="plan-features">
+                                [cite_start]<li>20 Documents [cite: 117]</li>
+                                <li>Website Widget</li>
+                                <li>Standard UI</li>
+                                <li class="disabled">White-labeling</li>
+                            </ul>
+                            <button class="btn-outline-custom w-100">Select Plan</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="pricing-card popular">
+                            <div class="badge-pop">Most Popular</div>
+                            <h3>Pro</h3>
+                            <div class="price-container">
+                                <span class="currency">₹</span>
+                                <span class="price-amount" data-monthly="5,000" data-yearly="48,000">5,000</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <p class="text-muted small">For growing businesses</p>
+                            <hr>
+                            <ul class="plan-features">
+                                [cite_start]<li><strong>200</strong> Documents [cite: 123]</li>
+                                <li>Full RAG Pipeline</li>
+                                [cite_start]<li><strong>No Watermark</strong> [cite: 123]</li>
+                                <li>Prioritized GPU Inference</li>
+                            </ul>
+                            <button class="btn-primary-custom w-100">Start Free Trial</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="pricing-card">
+                            <h3>Business</h3>
+                            <div class="price-container">
+                                <span class="currency">₹</span>
+                                <span class="price-amount" data-monthly="15,000" data-yearly="1,44,000">15,000</span>
+                                <span class="period">/mo</span>
+                            </div>
+                            <p class="text-muted small">For large scale operations</p>
+                            <hr>
+                            <ul class="plan-features">
+                                [cite_start]<li>Unlimited Docs [cite: 126]</li>
+                                <li>Custom Integrations</li>
+                                [cite_start]<li>Multi-Agent Support [cite: 126]</li>
+                                <li>Dedicated Support</li>
+                            </ul>
+                            <button class="btn-outline-custom w-100">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="text-white">Actorly Systems</h5>
+                        <p class="text-white-50 small">Advanced AI solutions from Kolhapur, India.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p class="text-white-50 small">&copy; 2025 Actorly Systems. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
         </footer>
+
     </div>
 
-    <!-- JS: Bootstrap + GSAP -->
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
     <script src="./assets/js/script.js"></script>
-
 </body>
-
 </html>
