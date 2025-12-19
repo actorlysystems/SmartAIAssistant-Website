@@ -35,7 +35,7 @@
                     <button class="nav-contact-btn d-none d-sm-flex">
                         Get Demo <i class="bi bi-arrow-right-short"></i>
                     </button>
-                    <button class="nav-toggle d-lg-none" id="navToggle">
+                    <button class="nav-toggle d-lg-none" id="navToggle" aria-label="Toggle Menu">
                         <i class="bi bi-list"></i>
                     </button>
                 </div>
@@ -55,7 +55,7 @@
                     <div class="col-lg-6 hero-text">
                         <div class="hero-tag reveal-text">
                             <span class="pulse-dot"></span> 
-                            <span>Latency Goal: 0.5s - 1s [cite: 2]</span>
+                            <span>Latency Goal: 0.5s - 1s</span>
                         </div>
                         
                         <h1 class="hero-title">
@@ -63,7 +63,7 @@
                         </h1>
                         
                         <p class="hero-subtitle reveal-text">
-                            Train an Instruction-based AI Assistant on your PDFs, PowerBI reports, and Code files[cite: 4, 5]. 
+                            Train an Instruction-based AI Assistant on your PDFs, PowerBI reports, and Code files. 
                             Deploy a custom widget in minutes.
                         </p>
     
@@ -73,8 +73,8 @@
                         </div>
     
                         <div class="hero-specs reveal-text">
-                            <div class="spec-item"><i class="bi bi-cpu-fill"></i> GPU Inference [cite: 22]</div>
-                            <div class="spec-item"><i class="bi bi-database-lock"></i> Private Vector DB [cite: 15]</div>
+                            <div class="spec-item"><i class="bi bi-cpu-fill"></i> GPU Inference</div>
+                            <div class="spec-item"><i class="bi bi-database-lock"></i> Private Vector DB</div>
                         </div>
                     </div>
     
@@ -116,6 +116,10 @@
                     <p class="section-subtitle">From upload to answer in milliseconds.</p>
                 </div>
 
+                <div class="d-flex justify-content-center mb-4">
+                     [Image of RAG pipeline architecture]
+                </div>
+
                 <div class="process-grid">
                     <div class="process-step">
                         <div class="step-number">01</div>
@@ -127,21 +131,21 @@
                     <div class="process-step">
                         <div class="step-number">02</div>
                         <h4>Chunking & Embedding</h4>
-                        <p>Data is split into optimized chunks and converted to vectors using BGE-Large models[cite: 14].</p>
+                        <p>Data is split into optimized chunks and converted to vectors using BGE-Large models.</p>
                     </div>
                     <div class="process-arrow"><i class="bi bi-arrow-right d-none d-md-block"></i><i class="bi bi-arrow-down d-md-none"></i></div>
 
                     <div class="process-step">
                         <div class="step-number">03</div>
                         <h4>Vector Storage</h4>
-                        <p> stored in Qdrant/Milvus with strict `bot_id` isolation for security[cite: 9, 15].</p>
+                        <p>Stored in Qdrant/Milvus with strict <code>bot_id</code> isolation for security.</p>
                     </div>
                     <div class="process-arrow"><i class="bi bi-arrow-right d-none d-md-block"></i><i class="bi bi-arrow-down d-md-none"></i></div>
 
                     <div class="process-step highlight">
                         <div class="step-number">04</div>
                         <h4>LLM Reasoning</h4>
-                        <p>DeepSeek R1 or Llama3 generates the answer using the retrieved context[cite: 13].</p>
+                        <p>DeepSeek R1 or Llama3 generates the answer using the retrieved context.</p>
                     </div>
                 </div>
             </div>
@@ -153,13 +157,13 @@
                     <div class="col-lg-5">
                         <h2 class="text-white mb-4">Enterprise Grade<br>Architecture</h2>
                         <p class="text-white-50 mb-4">
-                            Built for speed and scale. We use async workers and GPU servers to hit that 0.5s latency goal[cite: 2, 24].
+                            Built for speed and scale. We use async workers and GPU servers to hit that 0.5s latency goal.
                         </p>
                         <ul class="arch-list">
-                            <li><i class="bi bi-code-square"></i> <strong>Frontend:</strong> Next.js / React + Tailwind [cite: 11]</li>
-                            <li><i class="bi bi-server"></i> <strong>Backend:</strong> FastAPI / Node.js [cite: 12]</li>
-                            <li><i class="bi bi-cpu"></i> <strong>LLM:</strong> DeepSeek R1 / Qwen / Llama3 [cite: 13]</li>
-                            <li><i class="bi bi-hdd-network"></i> <strong>Queue:</strong> Redis [cite: 17]</li>
+                            <li><i class="bi bi-code-square"></i> <strong>Frontend:</strong> Next.js / React + Tailwind</li>
+                            <li><i class="bi bi-server"></i> <strong>Backend:</strong> FastAPI / Node.js</li>
+                            <li><i class="bi bi-cpu"></i> <strong>LLM:</strong> DeepSeek R1 / Qwen / Llama3</li>
+                            <li><i class="bi bi-hdd-network"></i> <strong>Queue:</strong> Redis</li>
                         </ul>
                     </div>
                     <div class="col-lg-7">
@@ -187,7 +191,7 @@
             </div>
         </section>
 
-   <section id="pricing" class="py-5 mt-4">
+        <section id="pricing" class="py-5 mt-4">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="section-title">Pricing Plans</h2>
@@ -215,7 +219,7 @@
                             <p class="text-muted small">For early stage startups</p>
                             <hr>
                             <ul class="plan-features">
-                                [cite_start]<li>20 Documents [cite: 117]</li>
+                                <li>20 Documents</li>
                                 <li>Website Widget</li>
                                 <li>Standard UI</li>
                                 <li class="disabled">White-labeling</li>
@@ -236,9 +240,9 @@
                             <p class="text-muted small">For growing businesses</p>
                             <hr>
                             <ul class="plan-features">
-                                [cite_start]<li><strong>200</strong> Documents [cite: 123]</li>
+                                <li><strong>200</strong> Documents</li>
                                 <li>Full RAG Pipeline</li>
-                                [cite_start]<li><strong>No Watermark</strong> [cite: 123]</li>
+                                <li><strong>No Watermark</strong></li>
                                 <li>Prioritized GPU Inference</li>
                             </ul>
                             <button class="btn-primary-custom w-100">Start Free Trial</button>
@@ -256,9 +260,9 @@
                             <p class="text-muted small">For large scale operations</p>
                             <hr>
                             <ul class="plan-features">
-                                [cite_start]<li>Unlimited Docs [cite: 126]</li>
+                                <li>Unlimited Docs</li>
                                 <li>Custom Integrations</li>
-                                [cite_start]<li>Multi-Agent Support [cite: 126]</li>
+                                <li>Multi-Agent Support</li>
                                 <li>Dedicated Support</li>
                             </ul>
                             <button class="btn-outline-custom w-100">Contact Sales</button>

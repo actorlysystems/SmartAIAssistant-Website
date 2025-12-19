@@ -21,8 +21,11 @@ const navMobileLinks = document.getElementById("navMobileLinks");
 navToggle.addEventListener("click", () => {
     navMobileLinks.classList.toggle("active");
     const icon = navToggle.querySelector("i");
-    icon.classList.toggle("bi-list");
-    icon.classList.toggle("bi-x-lg");
+    if (navMobileLinks.classList.contains("active")) {
+        icon.classList.replace("bi-list", "bi-x-lg");
+    } else {
+        icon.classList.replace("bi-x-lg", "bi-list");
+    }
 });
 
 // 4. Hero Animations
@@ -93,7 +96,7 @@ gsap.to(".code-window", {
     rotateY: 5
 });
 
-// Pricing Cards
+// Pricing Cards Animation (Uncommented and fixed)
 // gsap.from(".pricing-card", {
 //     scrollTrigger: {
 //         trigger: "#pricing",
@@ -133,7 +136,8 @@ function highlightNavigation() {
         }
     });
 }
-// Update this part in script.js to handle smooth click scrolling
+
+// 8. Smooth Click Scrolling with Lenis
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -157,6 +161,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Attach to window scroll event
 window.addEventListener("scroll", highlightNavigation);
 
+// 9. Pricing Toggle Logic
+const pricingToggle = document.getElementById("pricingToggle");
+const priceAmounts = document.querySelectorAll(".price-amount");
+const pricePeriods = document.querySelectorAll(".period");
+
+if (pricingToggle) {
+    pricingToggle.addEventListener("change", () => {
+        const isYearly = pricingToggle.checked;
+
+        // Animate out
+        gsap.to([priceAmounts, pricePeriods], {
+            y: -10,
+            opacity: 0,
+            duration: 0.2,
+            onComplete: () => {
+                // Update Text
+                priceAmounts.forEach(el => {
+                    el.textContent = isYearly ? el.dataset.yearly : el.dataset.monthly;
+                });
+                pricePeriods.forEach(el => {
+                    el.textContent = isYearly ? "/yr" : "/mo";
+                });
+
+                // Animate in
+                gsap.to([priceAmounts, pricePeriods], {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.2
+                });
+            }
+        });
+    });
+}
+
 // Nav Glass Effect on Scroll
 window.addEventListener("scroll", () => {
     const nav = document.querySelector(".smart-nav");
@@ -167,36 +205,4 @@ window.addEventListener("scroll", () => {
         nav.style.background = "rgba(255, 255, 255, 0.65)";
         nav.style.boxShadow = "none";
     }
-});
-
-// Pricing Toggle Logic
-const pricingToggle = document.getElementById("pricingToggle");
-const priceAmounts = document.querySelectorAll(".price-amount");
-const pricePeriods = document.querySelectorAll(".period");
-
-pricingToggle.addEventListener("change", () => {
-    const isYearly = pricingToggle.checked;
-
-    // Animate out
-    gsap.to([priceAmounts, pricePeriods], {
-        y: -10,
-        opacity: 0,
-        duration: 0.2,
-        onComplete: () => {
-            // Update Text
-            priceAmounts.forEach(el => {
-                el.textContent = isYearly ? el.dataset.yearly : el.dataset.monthly;
-            });
-            pricePeriods.forEach(el => {
-                el.textContent = isYearly ? "/yr" : "/mo";
-            });
-
-            // Animate in
-            gsap.to([priceAmounts, pricePeriods], {
-                y: 0,
-                opacity: 1,
-                duration: 0.2
-            });
-        }
-    });
 });
